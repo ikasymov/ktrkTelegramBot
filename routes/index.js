@@ -6,4 +6,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.post('/hook', function(req, res, next){
+  console.log(req.body);
+  return res.json({
+    success: true
+  })
+});
+
 module.exports = router;
